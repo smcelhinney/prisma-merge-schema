@@ -58,15 +58,10 @@ model User {
 <!-- usage -->
 ```sh-session
 $ npm install -g prisma-merge-schema
-$ prisma-merge-schema \
-  --datasource ./prisma/src/datasource.prisma \
-  --decorator ./prisma/src/decorators.prisma \
-  --outputFile ./prisma/schema.prisma
+$ prisma-merge-schema COMMAND
 running command...
-
 $ prisma-merge-schema (-v|--version|version)
-prisma-merge-schema/0.0.2 darwin-x64 node-v12.18.2
-
+prisma-merge-schema/0.1.0 darwin-x64 node-v12.18.2
 $ prisma-merge-schema --help [COMMAND]
 USAGE
   $ prisma-merge-schema COMMAND
