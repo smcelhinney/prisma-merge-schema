@@ -1,14 +1,45 @@
 prisma-merge-schema
 ===================
 
-Merges/postfixes Prisma v2 schemas. Useful for applying changes after `prisma introspect` without modifying your original schema. 
+Merges/postfixes Prisma v2 schemas.
 
-See usage section for details.
+See usage section and examples for more details.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/prisma-merge-schema.svg)](https://npmjs.org/package/prisma-merge-schema)
 [![Downloads/week](https://img.shields.io/npm/dw/prisma-merge-schema.svg)](https://npmjs.org/package/prisma-merge-schema)
 [![License](https://img.shields.io/npm/l/prisma-merge-schema.svg)](https://github.com/smcelhinney/prisma-merge-schema/blob/main/package.json)
+
+
+## Examples
+
+### Merge schemas (glob pattern)
+
+```shell
+npx prisma-merge-schema \
+  --datasource ./prisma/src/**/* 
+  --outputFile output.schema
+```
+
+### Merge schemas (multiple files explicitly declared)
+
+```shell
+npx prisma-merge-schema \
+  --datasource ./prisma/src/datasource1.prisma  \
+  --datasource ./prisma/src/datasource2.prisma  \
+  --outputFile output.schema
+```
+
+### Merge schemas and apply decorators
+
+```shell
+npx prisma-merge-schema \
+  --datasource ./prisma/src/datasource.prisma \
+  --decorators ./prisma/src/decorators.prisma \
+  --outputFile output.schema
+```
+
+## Decorators
 
 Given a datasource of 
 
@@ -41,7 +72,7 @@ running
 ```shell
 npx prisma-merge-schema \
   --datasource ./prisma/src/datasource.prisma \
-  --decorator ./prisma/src/decorators.prisma \
+  --decorators ./prisma/src/decorators.prisma \
   --outputFile ./prisma/schema.prisma
 ```
 
@@ -54,6 +85,8 @@ model User {
   newfield    String    @default("") @db.VarChar(1000)
 }
 ```
+
+Useful for applying changes after `prisma introspect` without modifying your original schema. 
 
 ## Feature roadmap
 
