@@ -66,7 +66,7 @@ class PrismaMergeSchema extends Command {
         }
       });
 
-      str = splitStr.join("\n");
+      str = splitStr.filter(item => item && item !== '').join("\n");
     });
 
     return str;
