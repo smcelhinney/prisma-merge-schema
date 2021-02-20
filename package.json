@@ -1,7 +1,7 @@
 {
   "name": "prisma-merge-schema",
   "description": "Merges/postfixes Prisma (v2) schemas",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Stephen McElhinney @smcelhinney",
   "bin": {
     "prisma-merge-schema": "./bin/run"

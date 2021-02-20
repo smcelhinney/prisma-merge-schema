@@ -68,7 +68,7 @@ $ npm install -g prisma-merge-schema
 $ prisma-merge-schema COMMAND
 running command...
 $ prisma-merge-schema (-v|--version|version)
-prisma-merge-schema/0.1.0 darwin-x64 node-v12.18.2
+prisma-merge-schema/0.1.1 darwin-x64 node-v12.18.2
 $ prisma-merge-schema --help [COMMAND]
 USAGE
   $ prisma-merge-schema COMMAND
