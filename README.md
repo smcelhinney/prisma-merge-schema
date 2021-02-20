@@ -57,7 +57,7 @@ model User {
 
 ## Feature roadmap
 
-* Allow merging of multiple datasource schemas 
+* Allow merging of multiple datasource schemas (`glob`) 
 * Handle automatic deletion of `@@index` annotations
 
 
