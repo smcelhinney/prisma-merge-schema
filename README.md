@@ -90,9 +90,7 @@ Useful for applying changes after `prisma introspect` without modifying your ori
 
 ## Feature roadmap
 
-* Allow merging of multiple datasource schemas (`glob`) 
 * Handle automatic deletion of `@@index` annotations
-
 
 # Usage
 <!-- usage -->
