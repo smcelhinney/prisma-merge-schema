@@ -2,11 +2,11 @@
   "name": "prisma-merge-schema",
   "description": "Merges/postfixes Prisma (v2) schemas",
   "version": "0.0.1",
-  "author": "Stephen McElhinney @appstructio",
+  "author": "Stephen McElhinney @smcelhinney",
   "bin": {
     "prisma-merge-schema": "./bin/run"
   },
-  "bugs": "https://github.com/appstructio/prisma-merge-schema/issues",
+  "bugs": "https://github.com/smcelhinney/prisma-merge-schema",
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
@@ -36,7 +36,7 @@
     "/bin",
     "/lib"
   ],
-  "homepage": "https://github.com/appstructio/prisma-merge-schema",
+  "homepage": "https://github.com/smcelhinney/prisma-merge-schema",
   "keywords": [
     "oclif"
   ],
@@ -45,7 +45,7 @@
   "oclif": {
     "bin": "prisma-merge-schema"
   },
-  "repository": "appstructio/prisma-merge-schema",
+  "repository": "smcelhinney/prisma-merge-schema",
   "scripts": {
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
