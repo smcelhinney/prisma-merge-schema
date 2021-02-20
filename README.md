@@ -1,7 +1,9 @@
 prisma-merge-schema
 ===================
 
-Merges/postfixes Prisma v2 schemas. 
+Merges/postfixes Prisma v2 schemas. Useful for applying changes after `prisma introspect` without modifying your original schema. 
+
+See usage section for details.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/prisma-merge-schema.svg)](https://npmjs.org/package/prisma-merge-schema)
@@ -34,7 +36,16 @@ remove model User {
 }
 ```
 
-produces 
+running
+
+```shell
+npx prisma-merge-schema \
+  --datasource ./prisma/src/datasource.prisma \
+  --decorator ./prisma/src/decorators.prisma \
+  --outputFile ./prisma/schema.prisma
+```
+
+produces a schema file
 
 ```prisma
 model User {
