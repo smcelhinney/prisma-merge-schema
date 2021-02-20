@@ -61,10 +61,6 @@ model User {
 * Handle automatic deletion of `@@index` annotations
 
 
-<!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
 # Usage
 <!-- usage -->
 ```sh-session
