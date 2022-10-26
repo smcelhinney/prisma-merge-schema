@@ -54,7 +54,8 @@ class PrismaMergeSchema extends Command {
       itemsToRemove = itemsToRemove
         .split("\n")
         .filter((i: string) => i !== "")
-        .map((i: string) => i.trim());
+        .map((i: string) => i.trim())
+        .filter((i) => i !== "");
 
       // Find the line inside the appropriate model
       const splitStr: string[] = str.split("\n");
@@ -64,7 +65,7 @@ class PrismaMergeSchema extends Command {
       [
         ...splitStr.map((i) => {
           i = i.replace(/^\s+/, "");
-          if (!i.startsWith("model")) {
+          if (!i.startsWith("model") && !i.startsWith("generator") && !i.startsWith("datasource")) {
             i = i.substring(0, i.indexOf(" "));
           }
           return i;
@@ -101,7 +102,8 @@ class PrismaMergeSchema extends Command {
             linePrefix: content.substring(0, content.indexOf(" ")),
             content,
           };
-        });
+        })
+        .filter((i) => i.content !== "");
 
       // Find the line inside the appropriate model
       const splitStr = str.split("\n");
@@ -109,7 +111,7 @@ class PrismaMergeSchema extends Command {
       const leftTrimmed = [
         ...splitStr.map((i) => {
           i = i.replace(/^\s+/, "");
-          if (!i.startsWith("model")) {
+          if (!i.startsWith("model") && !i.startsWith("generator") && !i.startsWith("datasource")) {
             i = i.substring(0, i.indexOf(" "));
           }
           return i;
